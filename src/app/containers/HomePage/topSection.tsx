@@ -1,7 +1,7 @@
 import { BlobContainer, ButtonsContainer, Description, LeftContainer, RightContainer, Slogan, StandaloneCar, TopSectionContainer } from "./style";
 import MclarenCarImg from "../../../assets/images/mclaren-orange-big.png";
 import BlobImg from "../../../assets/images/blob.svg";
-import { Button } from "../../components/button/button";
+import { Button } from "../../components/button";
 
 
 export function TopSection() {
