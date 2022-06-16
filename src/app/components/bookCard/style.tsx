@@ -1,8 +1,8 @@
 import styled , {css} from "styled-components"
 import tw from 'twin.macro'
 import { SCREENS } from "../responsive";
-// import Calendar from "react-calendar";
-// import "react-calendar/dist/Calendar.css";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
 
 export const CardContainer = styled.div`
   min-height: 4.3em;
@@ -71,21 +71,21 @@ export const LineSeperator = styled.span`
   `};
 `;
 
-// export const DateCalendar = styled(Calendar)`
-//   position: absolute;
-//   max-width: none;
-//   user-select: none;
-//   top: 2em;
-//   left: 0;
+export const DateCalendar = styled(Calendar)`
+  position: absolute;
+  max-width: none;
+  user-select: none;
+  top: 1.5em;
+  left: -2em;
 
-//   ${({ offset }: any) =>
-//     offset &&
-//     css`
-//       left: -6em;
-//     `};
+  ${({ offset }: any) =>
+    offset &&
+    css`
+      left: -6em;
+    `};
 
-//   @media (min-width: ${SCREENS.md}) {
-//     top: 3.5em;
-//     left: -2em;
-//   }
-// ` as any;
+  @media (min-width: ${SCREENS.md}) {
+    top: 3.5em;
+    left: -2em;
+  }
+` as any;
