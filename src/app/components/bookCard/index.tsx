@@ -6,7 +6,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button } from "../button";
-import { CardContainer, DateCalendar, Icon, ItemContainer, LineSeperator, Name } from "./style";
+import { CardContainer, DateCalendar, Icon, ItemContainer, LineSeperator, Name, SmallIcon } from "./style";
 import { Marginer } from "../marginer";
 
 export function BookCard(){
@@ -35,6 +35,9 @@ export function BookCard(){
                 <Name onClick={toggleStartCalendar}>
                     Pick Up Date
                 </Name>
+                <SmallIcon>
+                    <FontAwesomeIcon icon={isStartCalendarOpen ? faCaretDown : faCaretUp}/>
+                </SmallIcon>
                 {isStartCalendarOpen && <DateCalendar value={startDate} onChange={setStartDate}  />}
             </ItemContainer>
             <LineSeperator />
@@ -45,7 +48,10 @@ export function BookCard(){
                 <Name onClick={toggleReturnCalendar}>
                     Return Date
                 </Name>
-                {isReturnCalendarOpen && <DateCalendar value={startDate} onChange={setStartDate}  />}
+                <SmallIcon>
+                    <FontAwesomeIcon icon={isReturnCalendarOpen ? faCaretDown : faCaretUp}/>
+                </SmallIcon>
+                {isReturnCalendarOpen && <DateCalendar value={returnDate} onChange={setReturnDate}  />}
 
             </ItemContainer>
             <Marginer direction="horizontal" margin={"2em"}/>
